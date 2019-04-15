@@ -40,7 +40,7 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <img className="App-logo" src={logo}/>
+        <img className="App-logo" src={logo} alt="React Logo"/>
         <Welcome name="Mike" />
         <Button buttonName="Click me!" onClick={this.buttonClicked} />
         <Button buttonName="Reset" onClick={this.reset} />
