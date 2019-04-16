@@ -51,8 +51,12 @@ class App extends Component {
         <Button buttonName="Reset" onClick={this.reset} />
         <ButtonStatus n={this.state.clicks} />
         <footer>
-          <a className="FooterAnchor" href={`mailto:${email}`}>Hacked up by {name}</a>
-          <a className="FooterAnchor" href={github} target="_blank">View on GitHub</a>
+          <a className="FooterAnchor" href={`mailto:${email}`}>
+            Hacked up by {name}
+          </a>
+          <a className="FooterAnchor" href={github} target="_blank" rel="noopener noreferrer">
+            View on GitHub
+          </a>
         </footer>
       </div>
     )
