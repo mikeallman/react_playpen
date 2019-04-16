@@ -1,9 +1,17 @@
 language: node_js
 node_js:
-  - "stable"
+- stable
 cache:
   directories:
-    - node_modules
+  - node_modules
 script:
-  - npm test
-  - npm run build
+- npm test
+- npm run build
+deploy:
+  provider: gae
+  keyfile: app-engine-credentials.json
+  project: mike-237810
+  on: master
+before_install:
+- openssl aes-256-cbc -K $encrypted_b7805b4fab0c_key -iv $encrypted_b7805b4fab0c_iv
+  -in app-engine-credentials.json.enc -out app-engine-credentials.json -d
