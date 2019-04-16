@@ -3,7 +3,7 @@ import logo from './logo.svg';
 import './App.css';
 
 function Welcome(props) {
-  return <h1>Hello {props.name}</h1>;
+  return <h1>{props.name} is learning react</h1>;
 }
 
 function Button(props) {
@@ -28,7 +28,6 @@ class App extends Component {
     this.setState({
       clicks: n + 1
     })
-    if (this.state.clicks === 10) {alert("Ricky is a cunt.")}
   }
 
   reset = () => {
@@ -51,6 +50,5 @@ class App extends Component {
   }
 
 }
-
 
 export default App;
