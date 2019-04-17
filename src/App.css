@@ -4,18 +4,24 @@ body {
   font-family: Arial;
 }
 
-h1 {
-  font-size: calc(30px + 2vmin);
+header {
+  margin-top: auto;
+  padding-bottom: 16px;
+  padding: 16px ;
+  font-size: 16px;
+  display: flex;
+  flex-direction: row;
+  background: lightgray;
 }
 
 footer {
   margin-top: auto;
   padding-bottom: 16px;
-  padding: 16px 0;
+  padding: 16px ;
   font-size: 16px;
   display: flex;
   flex-direction: column;
-  border-top: 1px solid #eeeeee;
+  background: lightgray;
 }
 
 .FooterAnchor {
@@ -30,8 +36,7 @@ footer {
 .App {
   max-width: vmax;
   margin: 0 auto;
-  padding: 0 32px;
-  font-size: calc(10px + 2vmin);
+  font-size: calc(15px + 2vmin);
   display: flex;
   flex-direction: column;
   min-height: 100vh;
@@ -40,8 +45,25 @@ footer {
 
 .App-logo {
   animation: App-logo-spin infinite 20s linear;
-  height: 20vmin;
+  height: 10vmin;
   pointer-events: none;
+}
+
+.Welcome {
+  margin-top: 16px;
+  padding: 16px 0;
+}
+
+.MainContent {
+  min-width: 920px;
+  max-width: 1920px;
+  margin: auto;
+  padding: 64px;
+  display:  inherit;
+  flex-grow: inherit; 
+  flex-direction: inherit;
+  border-left: 2px solid lightgray;
+  border-right: 2px solid lightgray;
 }
 
 .Button {
@@ -64,7 +86,6 @@ footer {
 }
 
 .ButtonStatus{
-  color: #303030c2;
   margin-top: 16px;
   padding: 16px 0;
 }

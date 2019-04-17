@@ -7,7 +7,7 @@ const email = "mike@allman.io"
 const github = "https://github.com/mikeallman/react_playpen"
 
 function Welcome(props) {
-  return <h1>{props.name} is learning react!</h1>;
+  return <div className="Welcome">{props.name} is learning react!</div>;
 }
 
 function Button(props) {
@@ -43,21 +43,37 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <div>
-          <img className="App-logo" src={logo} alt="React Logo"/>
+        
+        <header>
+          <a className="FooterAnchor" href="./">HOME</a>
+        </header>
+      
+
+        <div className="MainContent">
+        
+          <div>
+            <img className="App-logo" src={logo} alt="React Logo"/>
+          </div>
+        
+          <Welcome name="Mike" />
+          <Button buttonName="Click me!" onClick={this.buttonClicked} />
+          <Button buttonName="Reset" onClick={this.reset} />
+          <ButtonStatus n={this.state.clicks} />
+        
         </div>
-        <Welcome name="Mike" />
-        <Button buttonName="Click me!" onClick={this.buttonClicked} />
-        <Button buttonName="Reset" onClick={this.reset} />
-        <ButtonStatus n={this.state.clicks} />
+        
         <footer>
+
           <a className="FooterAnchor" href={`mailto:${email}`}>
             Hacked up by {name}
           </a>
+          
           <a className="FooterAnchor" href={github} target="_blank" rel="noopener noreferrer">
             View on GitHub
           </a>
+
         </footer>
+        
       </div>
     )
   }
