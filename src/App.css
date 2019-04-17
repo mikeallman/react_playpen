@@ -47,7 +47,8 @@ footer {
 .Button {
   background-color: #303030c2; 
   color: white;
-  border: none;
+  border-style: solid;
+  border-width: 1px;
   padding: 15px 32px;
   text-align: center;
   text-decoration: none;
@@ -60,7 +61,6 @@ footer {
 
 .Button:hover {
   background-color: rgb(67, 144, 196); /* Green */
-  color: white;
 }
 
 .ButtonStatus{
