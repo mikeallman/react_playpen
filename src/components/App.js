@@ -1,11 +1,10 @@
 import React, {Component} from 'react'
 import AppMenu from './AppMenu'
+import AppFooter from './AppFooter'
 import Counter from './Counter'
 import ImageSearch from './ImageSeach'
 import WeatherForecast from './WeatherForecast'
-import { Header, Segment, Container, Icon, Button} from 'semantic-ui-react'
-
-const email = "mike@allman.io"
+import { Header, Segment, Container, Icon} from 'semantic-ui-react'
 
 
 class App extends Component {
@@ -40,14 +39,7 @@ class App extends Component {
                         {this.getContent()}
                     </Segment>
                 </Container>
-                <Segment inverted vertical style={{ margin: '2em 2em 2em', padding: '2em 2em', position: 'absolute', left: 0, right: 0, bottom: 0}}>
-                    <a href="https://github.com/mikeallman/react_playpen">
-                        <Button color="blue"><Icon name="github"/>Github</Button>
-                    </a>
-                    <a href={`mailto:${email}`}>
-                        <Button color="blue"><Icon name="mail"/>Email</Button>
-                    </a>
-                </Segment>
+                <AppFooter />
             </div>
         )
     }
