@@ -9,7 +9,7 @@ import { Header, Segment, Container, Icon} from 'semantic-ui-react'
 
 class App extends Component {
 
-    state = {activeMenuItem: 'counter'}
+    state = {activeMenuItem: ''}
 
     handleMenuClick = (e, { name }) => {
         this.setState({ activeMenuItem: name })
@@ -23,6 +23,8 @@ class App extends Component {
                 return <ImageSearch />
             case 'weather':
                 return <WeatherForecast />
+            default:
+                return <Counter />
         }
     }
 
