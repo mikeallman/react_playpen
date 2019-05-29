@@ -9,7 +9,7 @@ import { Header, Segment, Container, Icon} from 'semantic-ui-react'
 
 class App extends Component {
 
-    state = {activeMenuItem: ''}
+    state = {activeMenuItem: 'counter'}
 
     handleMenuClick = (e, { name }) => {
         this.setState({ activeMenuItem: name })
